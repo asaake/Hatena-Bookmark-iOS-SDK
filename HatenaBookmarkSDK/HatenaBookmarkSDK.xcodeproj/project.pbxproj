@@ -191,7 +191,6 @@
 		070B808417BE3B9600ED4723 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B808317BE3B9600ED4723 /* Security.framework */; };
 		070B808517BE3BA400ED4723 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B802917BE38DF00ED4723 /* SystemConfiguration.framework */; };
 		070B808617BE3BBF00ED4723 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B802B17BE38E900ED4723 /* MobileCoreServices.framework */; };
-		3F7308651AA5F05500A9D097 /* HTBMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7308641AA5F05500A9D097 /* HTBMacro.h */; };
 		099A4BAD18E0280E0085DD25 /* HatenaAFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 099A4B9A18E0280E0085DD25 /* HatenaAFHTTPClient.h */; };
 		099A4BAE18E0280E0085DD25 /* HatenaAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 099A4B9B18E0280E0085DD25 /* HatenaAFHTTPClient.m */; };
 		099A4BAF18E0280E0085DD25 /* HatenaAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 099A4B9B18E0280E0085DD25 /* HatenaAFHTTPClient.m */; };
@@ -220,6 +219,7 @@
 		099A4BC618E0280E0085DD25 /* UIImageView+HatenaAFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 099A4BAB18E0280E0085DD25 /* UIImageView+HatenaAFNetworking.h */; };
 		099A4BC718E0280E0085DD25 /* UIImageView+HatenaAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 099A4BAC18E0280E0085DD25 /* UIImageView+HatenaAFNetworking.m */; };
 		099A4BC818E0280E0085DD25 /* UIImageView+HatenaAFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 099A4BAC18E0280E0085DD25 /* UIImageView+HatenaAFNetworking.m */; };
+		3F7308651AA5F05500A9D097 /* HTBMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7308641AA5F05500A9D097 /* HTBMacro.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -547,7 +547,6 @@
 		070B806917BE3A1400ED4723 /* LSStubResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSStubResponse.m; sourceTree = "<group>"; };
 		070B808017BE3B1600ED4723 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		070B808317BE3B9600ED4723 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3F7308641AA5F05500A9D097 /* HTBMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBMacro.h; sourceTree = "<group>"; };
 		099A4B9A18E0280E0085DD25 /* HatenaAFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaAFHTTPClient.h; sourceTree = "<group>"; };
 		099A4B9B18E0280E0085DD25 /* HatenaAFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaAFHTTPClient.m; sourceTree = "<group>"; };
 		099A4B9C18E0280E0085DD25 /* HatenaAFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HatenaAFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -567,6 +566,7 @@
 		099A4BAA18E0280E0085DD25 /* HatenaAFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HatenaAFXMLRequestOperation.m; sourceTree = "<group>"; };
 		099A4BAB18E0280E0085DD25 /* UIImageView+HatenaAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HatenaAFNetworking.h"; sourceTree = "<group>"; };
 		099A4BAC18E0280E0085DD25 /* UIImageView+HatenaAFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HatenaAFNetworking.m"; sourceTree = "<group>"; };
+		3F7308641AA5F05500A9D097 /* HTBMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1341,7 +1341,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = 070B79CE17BE36C500ED4723 /* Build configuration list for PBXProject "HatenaBookmarkSDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1649,6 +1649,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1692,16 +1693,14 @@
 		070B79FF17BE36C500ED4723 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HatenaBookmarkSDK/HatenaBookmarkSDK-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "HatenaBookmarkSDK/HatenaBookmarkSDK-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.hatena.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -1711,16 +1710,14 @@
 		070B7A0017BE36C500ED4723 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HatenaBookmarkSDK/HatenaBookmarkSDK-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "HatenaBookmarkSDK/HatenaBookmarkSDK-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.hatena.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
