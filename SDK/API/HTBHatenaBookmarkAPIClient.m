@@ -94,7 +94,7 @@ static NSDictionary * HTBParametersFromQueryString(NSString *queryString) {
 - (void)authorizeWithSuccess:(void (^)(AFOAuth1Token *accessToken, id responseObject))success
                  failure:(void (^)(NSError *error))failure
 {
-    [self acquireOAuthRequestTokenWithPath:KHatenaOAuthReuestTokenPath callbackURL:[NSURL URLWithString:@"http://www.hatena.ne.jp/"] accessMethod:@"POST" scope:@"read_private,write_public" success:^(AFOAuth1Token *requestToken, id responseObject) {
+    [self acquireOAuthRequestTokenWithPath:KHatenaOAuthReuestTokenPath callbackURL:[NSURL URLWithString:@"http://www.hatena.ne.jp/"] accessMethod:@"POST" scope:@"read_private,write_public,read_public,write_private" success:^(AFOAuth1Token *requestToken, id responseObject) {
 
         NSMutableDictionary *parameters = [@{} mutableCopy];
         [parameters setValue:requestToken.key forKey:@"oauth_token"];
