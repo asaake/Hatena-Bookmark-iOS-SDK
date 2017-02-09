@@ -73,24 +73,24 @@
  - NSCoding cannot serialize / deserialize block properties, so an archive of an HTTP client will not include any reachability callback block that may be set.
  */
 
-#ifdef _SYSTEMCONFIGURATION_H
-typedef enum {
-    HatenaAFNetworkReachabilityStatusUnknown          = -1,
-    HatenaAFNetworkReachabilityStatusNotReachable     = 0,
-    HatenaAFNetworkReachabilityStatusReachableViaWWAN = 1,
-    HatenaAFNetworkReachabilityStatusReachableViaWiFi = 2,
-} HatenaAFNetworkReachabilityStatus;
-#else
-#pragma message("SystemConfiguration framework not found in project, or not included in precompiled header. Network reachability functionality will not be available.")
-#endif
-
-#ifndef __UTTYPE__
-#if __IPHONE_OS_VERSION_MIN_REQUIRED
-#pragma message("MobileCoreServices framework not found in project, or not included in precompiled header. Automatic MIME type detection when uploading files in multipart requests will not be available.")
-#else
-#pragma message("CoreServices framework not found in project, or not included in precompiled header. Automatic MIME type detection when uploading files in multipart requests will not be available.")
-#endif
-#endif
+//#ifdef _SYSTEMCONFIGURATION_H
+//typedef enum {
+//    HatenaAFNetworkReachabilityStatusUnknown          = -1,
+//    HatenaAFNetworkReachabilityStatusNotReachable     = 0,
+//    HatenaAFNetworkReachabilityStatusReachableViaWWAN = 1,
+//    HatenaAFNetworkReachabilityStatusReachableViaWiFi = 2,
+//} HatenaAFNetworkReachabilityStatus;
+//#else
+//#pragma message("SystemConfiguration framework not found in project, or not included in precompiled header. Network reachability functionality will not be available.")
+//#endif
+//
+//#ifndef __UTTYPE__
+//#if __IPHONE_OS_VERSION_MIN_REQUIRED
+//#pragma message("MobileCoreServices framework not found in project, or not included in precompiled header. Automatic MIME type detection when uploading files in multipart requests will not be available.")
+//#else
+//#pragma message("CoreServices framework not found in project, or not included in precompiled header. Automatic MIME type detection when uploading files in multipart requests will not be available.")
+//#endif
+//#endif
 
 typedef enum {
     HatenaAFFormURLParameterEncoding,
