@@ -93,6 +93,13 @@
 //#endif
 
 typedef enum {
+    HatenaAFNetworkReachabilityStatusUnknown          = -1,
+    HatenaAFNetworkReachabilityStatusNotReachable     = 0,
+    HatenaAFNetworkReachabilityStatusReachableViaWWAN = 1,
+    HatenaAFNetworkReachabilityStatusReachableViaWiFi = 2,
+} HatenaAFNetworkReachabilityStatus;
+
+typedef enum {
     HatenaAFFormURLParameterEncoding,
     HatenaAFJSONParameterEncoding,
     HatenaAFPropertyListParameterEncoding,
