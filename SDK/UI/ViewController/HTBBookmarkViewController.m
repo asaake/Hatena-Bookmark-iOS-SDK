@@ -187,7 +187,8 @@
 {
     [super viewWillLayoutSubviews];
 #if __IPHONE_7_0 && __IPHONE_OS_VERSION_MAX_ALLOWED >=  __IPHONE_7_0
-    if ([self respondsToSelector:@selector(topLayoutGuide)]) { // for iOS7
+    if ([self respondsToSelector:@selector(topLayoutGuide)]
+        && ![self respondsToSelector:@selector(safeAreaLayoutGuide)]) { // for iOS7
         self.rootView.scrollView.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length, 0, 0, 0);
     }
     
